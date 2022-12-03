@@ -1,0 +1,4 @@
+ <div class="card">
+                <img class="foto" src="./img/Ellipse 2.png" alt="">
+                <h1 class="titulo">valorant</h1>
+            </div>

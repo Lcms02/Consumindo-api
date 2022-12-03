@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: #4d3147;
+}
+
+#titulo{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2.3rem;
+}
+
+main{
+    background-color: #202329;
+    width: 100%;
+    height: 85%;
+}
+
+.form-input-container{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input-container input{
+    width: 50%;
+    height: 6vh;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    text-align: center;
+}
+
+.form-input-container button{
+    width: 5vw;
+    height: 6vh;
+    background-color: #4d3147;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-input-container button:hover{
+    background-color: rgb(141, 141, 141);
+    color: #4d3147;
+}
+
+#categorias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fa{
+    cursor: pointer;
+}
+
+#categorias i{
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem;
+}
+
+#characters{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+}
+
+#characters2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: 20vw;
+    height: 90%;
+    background-color: #3c3e44;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.foto img{
+    width: 100%;
+    height: 90%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.titulo{
+    width: 100%;
+    height: 10%;
+    border-radius: 0 0 1rem 1rem;   
+    text-align: center;
+    background-color: #3c3e44;
+    font-size: 1rem;
+    color: #fff;
+    padding: 1rem;
+}
+
+footer{
+    width: 100%;
+    height: 5vh;
+    background-color: #4d3147;
+}
+
+.card2{
+    width: 30vw;
+    height: 95%;
+    background-color: #3c3e44;
+    border-radius: 1rem;
+    margin: 1rem ;
+}
