@@ -25,9 +25,8 @@ fetch('https://rickandmortyapi.com/api/character').then((result)=>{
 
 // após informar personagem, chama a função showCharacters
 let btn = document.querySelector('#btn-function');
-const characterName = document.querySelector('#game-category');
 const input = document.querySelector('#game-category');
-
+const apiRickMortyURL =  `https://rickandmortyapi.com/api/character/?name=${name}`;
 
 // resolvendo o erro CORB
 headers = {
@@ -47,21 +46,20 @@ const getCharacterName = async(name) => {
 }
 
 const showCharacters = async (name) => {
-
     const data = await getCharacterName(name);
     let divCard = document.createElement('div');
     divCard.setAttribute('class', 'card2');
     let divFoto = document.createElement('div');
-    divFoto.setAttribute('class', 'foto');
+    divFoto.setAttribute('class', 'foto2');
     let img = document.createElement('img');
     img.setAttribute('src', data.image);
     divFoto.append(img);
-    let characterName = data.name+" - "+data.status+" - "+data.species+" - "+data.gender+ " - Localização de origem: "+data.origin.name+" - Localização atual: "+data.location.name+" - Apareceu em: "+data.episode.length+" episódios";
+    let input = data.name+" - "+data.status+" - "+data.species+" - "+data.gender+ " - Localização de origem: "+data.origin.name+" - Localização atual: "+data.location.name+" - Apareceu em: "+data.episode.length+" episódios";
     divtitulo = document.createElement('div');
-    divtitulo.setAttribute('class', 'titulo');
+    divtitulo.setAttribute('class', 'titulo2');
     let titulo = document.createElement('h2');
     divtitulo.append(titulo);
-    titulo.append(characterName);
+    titulo.append(input);
     document.querySelector("#characters2").append(divCard);
     divCard.append(divFoto);
     divCard.append(divtitulo);
@@ -69,21 +67,18 @@ const showCharacters = async (name) => {
 }
 
 //evento
-
-
-if(input != null){
 btn.addEventListener("click", (e)=>{
-    e.preventDefault();
-
-    const name = characterName.value;
-    document.querySelector("#characters").innerHTML = "";
-    input.value = "";
-    document.querySelector("#characters2").innerHTML = "";
-    
-    showCharacters(name);
-})
-}
-
+    if(input.value != ""){
+        const name = input.value;
+        document.querySelector("#characters").innerHTML = "";
+        input.value = "";
+        document.querySelector("#characters2").innerHTML = "";
+        showCharacters(name);
+    }
+    else {
+        input.value = "Informe um personagem";
+    }
+});
 // fetch('https://rickandmortyapi.com/api/character').then((result)=>{
 //         return result.json();
 //     }).then((resp)=>{
