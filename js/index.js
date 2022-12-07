@@ -10,12 +10,12 @@ fetch('https://rickandmortyapi.com/api/character').then((result)=>{
             let img = document.createElement('img');
             img.setAttribute('src', data.image);
             divFoto.append(img);
-            let gameName = data.name;
+            let characterName = data.name;
             divtitulo = document.createElement('div');
             divtitulo.setAttribute('class', 'titulo');
             let titulo = document.createElement('h2');
             divtitulo.append(titulo);
-            titulo.append(gameName);
+            titulo.append(characterName);
             document.querySelector("#characters").append(divCard);
             divCard.append(divFoto);
             divCard.append(divtitulo);
@@ -25,7 +25,7 @@ fetch('https://rickandmortyapi.com/api/character').then((result)=>{
 
 // após informar personagem, chama a função showCharacters
 let btn = document.querySelector('#btn-function');
-const input = document.querySelector('#game-category');
+const input = document.querySelector('#character-name');
 const apiRickMortyURL =  `https://rickandmortyapi.com/api/character/?name=${name}`;
 
 // resolvendo o erro CORB

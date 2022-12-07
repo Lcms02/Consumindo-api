@@ -125,7 +125,7 @@ footer{
     background-color: #3c3e44;
     border-radius: 1rem;
     margin: 1rem ;
-    word-wrap: break-word;
+    text-align: center;
 }
 
 .foto2 img{
