@@ -79,6 +79,23 @@ btn.addEventListener("click", (e)=>{
         input.value = "Informe um personagem";
     }
 });
+
+input.addEventListener("keyup", (e)=>{
+
+    if(e.code === "Enter"){
+        if(input.value != ""){
+            const name = input.value;
+            document.querySelector("#characters").innerHTML = "";
+            input.value = "";
+            document.querySelector("#characters2").innerHTML = "";
+            showCharacters(name);
+        }
+        else {
+            input.value = "Informe um personagem";
+        }
+    }
+})
+
 // fetch('https://rickandmortyapi.com/api/character').then((result)=>{
 //         return result.json();
 //     }).then((resp)=>{
